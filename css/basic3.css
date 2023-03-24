@@ -25,7 +25,7 @@ header {position:relative;min-width:1250px;height:100px;}
 
   .menu_wrap {
     position:absolute;width:100%;height:60px;bottom:0;
-    border-bottom:#aaa 1px solid;}
+    border-bottom:#ccc 1px solid;}
 
     .main_menu { position:absolute;height:100px; left:50%; margin-left:-400px;bottom:0;}
     .main_menu > li { 
@@ -43,7 +43,7 @@ header {position:relative;min-width:1250px;height:100px;}
     .main_menu .show::after { display:block;}
     
 
-    .main_menu > li a:hover {color:#aaa;}
+    .main_menu > li a:hover {color:#ddd;}
 
     .main_menu > li a {padding:40px 0;font-weight:700;transition:0.5s;}
 
@@ -57,6 +57,7 @@ header {position:relative;min-width:1250px;height:100px;}
       z-index: 10;
       height:0px;
       overflow: hidden;
+      border-bottom:1px solid #2e2e2e;
     }
     .menu_wrap:hover .sub_menu {
       height:276px;
@@ -122,163 +123,63 @@ header {position:relative;min-width:1250px;height:100px;}
 
 /* ----------메인------------ */
 main {}
-/* ---------------------배너(메인)------------------- */
-.banner {position:relative;
-  overflow: hidden;}
-.banner_space {width:100%; height:620px;
-  background: url('../img/bnimg01.jpg') center center / cover no-repeat;}
-.banner ul {
-  position:absolute; 
-  left:50%; 
-  bottom:15px;;
-  transform: translate(-50%);}
-.banner ul li {float:left;margin:0 5px;}
-.banner ul li button {
-  width:17px; height:17px; border-radius: 50%;
-  border:1px solid black;
-  background: rgba(2, 37, 59,0)
+/* ---------------------영상(메인)------------------- */
+
+.medias {}
+
+.medias_title {position:relative;
+  font-size:30px;font-weight:bold; padding-top:110px;
 }
-.check {background: rgba(2, 37, 59,1)}
-
-/* -------------------인쿼리(메인)--------------------- */
-.Inquiry {}
-
-.franch {padding: 20px 0;height:145px;}
-.franch p{font-size: 17px;line-height:50px;}
-
-.franch_icon {position:absolute; top:0; right:0; border-left:1px solid #ddd }
-.franch_icon li {float:left;width:174px; height:145px; text-align:center; border-right: 1px solid #ddd; }
-.franch_icon li::after {display:block; content:"";clear:both;}
-.franch_icon li img {height:97px;
-  padding-top:20px; padding-bottom:8px;
-  display:block;margin:0 auto; }
-.franch_icon li a {transition:0.5s}
-
-.franch_icon li:hover a {color:orange;}
-
-
-
-/* -------------------------푸드메뉴(메인)------------------------- */
-
-.food_menu {background: #022539;text-align: center;
-  padding: 50px 0 85px 0;}
-  .food_menu > div >img {margin-bottom:50px;}
-.food_menu ul {display:flex; justify-content: space-between;}
-.food_menu ul li {position:relative;overflow:hidden;border-bottom: 1px solid #fff;}
-.food_menu ul li a {width:100%; height:100%;}
-
-.food_menu ul li a .food_txt{
-  position:absolute; top:17px; left:17px;
-  z-index:10;
-}
-.food_menu ul li a .food_img {transition:.5s;}
-
-.food_menu ul li a:hover .food_img {transform: scale(1.1);}
-
-
-/* --------------------------인포(메인)--------------------------- */
-
-.info {}
-
-.boxs {
-  margin: 95px auto;
-  clear:both;
-  border:1px solid #aaa;
+.medias_title:after { position:absolute; 
+  bottom:-20px; left:0;
+  display:inline-block; content:"";
+  width:50px; height:3px; background:#000;
+  transition:0.5s;
 }
 
-.box1 {
-  float: left;
-  position: relative;
-  background: #e4e4e4;
-  width: 418px;
-  height: 398px;
-  padding: 30px;
-  overflow: hidden;
+.medias_menu {display:inline-block;
+  margin:100px 0 70px;
+  border-top:1px solid black;
+  border-bottom:1px solid black;
 }
-.box1 p {padding:20px 0; font-size: 18px; line-height:24px;}
+.medias_menu:after {display:block; content:""; clear:both;}
 
-.box2 {
-  float: left;
-  width: 415px;
-  height: 198px;
-  padding: 30px;
-  background: url('../img/sec3_img4.png');
-  background-size:cover;
-}
-.box2 img {}
-
-.box2 p {
-  font-size:18px; 
-  color: #fff;
-  margin:20px 0;
+.medias_menu li {
+  float:left; width:230px; 
+  height:40px; border-left:1px solid black;text-align: center;line-height:40px;
 }
 
-.box2 a {
-  display:block;
-  margin-top:35px;
-  padding:10px; 
-  font-size:18px; 
-  border: 1px solid #fff;
-  color: #fff;
-  text-align:center;
-  transition:.5s
-}
-.box2 a:hover {background:#fff; color:#000;}
 
-
-.box3 {
-  float: left;
-  width: 415px;
-  height: 198px;
-  padding: 30px;
-  background: url('../img/search_bg.png');
-  background-size:cover;
+.medias_menu li:last-child {
+  border-right:1px solid black;
 }
 
-.box3 p:first-of-type {font-size:22px; font-weight:bold;}
-.box3 p:last-of-type {font-size:17px; color:#333;margin:20px 0;}
-.box3 div {border: 1px solid #000; position:relative;margin-top:40px;}
-.box3 input {
-  width: 100%;
-  border: none;
-  height: 33px;
-  font-size: 18px;
-  text-indent: 15px;
-  
+.medias_menu .focus a { 
+  background:#02253B; font-weight:bold; color:#fff;
 }
-  .box3 input:focus {outline:none;}
-  .box3 button { 
-    position:absolute;top: 4px;
-    right: 10px;font-size:20px;
-    background:none;
-    border:none;
-    color:green;
-  }
-  .box3 button:hover { cursor:pointer; }
+.medias_menu li a {width:100%; height:100%;display:block}
 
 
-.box4 {
-  position:absolute;
-  bottom:0;
-  right:0;
-  width:833px;
-  height:199px;
-  padding: 0 20px;
+.medias_videos {}
+.medias_videos:after {display:block; content:""; clear:both;}
+.medias_videos li {
+  float:left;
+  height:500px; border-bottom: 1px solid #ddd;
+  margin:8px;
 }
-.box4 > img { margin: 15px 0 15px 20px;}
-.box4 > a { float:right; margin-top:15px; font-size:14px;}
-.box4 > div { height:1px; background:#000;}
+.medias_videos li iframe{padding-bottom:5px;}
+.medias_videos li div {font-weight:700; font-size:18px; padding:0 10px;}
+.medias_videos li div span { display:block;
+  font-weight:400; line-height:35px; }
 
-table {display:block}
-tbody {display:block}
-tbody tr {position:relative;
-  display:block; margin-top:15px; margin-left:20px;}
-tbody tr td {font-size:18px;}
-tbody tr td:hover a {color:#666}
-tbody tr td span {font-weight:bold}
-.td_left {position:absolute; right:10px;top:0}
-.clear {clear:both;}
+  .bar {text-align: center;padding:100px; line-height:20px;}
+  .bar strong {}
+  .bar a {}
+  .bar a,.bar strong {display:inline-block; vertical-align: middle;margin: 10px;}
 
+
+
+/*---------------------수상경력(메인)---------------------*/
 .prize{
   text-align: center;
   background: #f8f8f8;
@@ -299,7 +200,7 @@ tbody tr td span {font-weight:bold}
   font-weight: 400;word-break:break-all
 }
 
-/*------------------푸터-----------------*/
+
 
 footer {    
   position: relative;
