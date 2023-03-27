@@ -37,10 +37,9 @@ header {position:relative;min-width:1250px;height:100px;}
       line-height:100px;
       height:100px;
     }
-    .main_menu_li::after { position:relative;
+    .underbar::after { position:relative;
       top:-3px;
-      display:none; content:""; clear:both; height:3px; background:#333 }
-    .main_menu .show::after { display:block;}
+      display:block; content:""; clear:both; height:5px; background:#333 }
     
 
     .main_menu > li a:hover {color:#aaa;}
@@ -124,9 +123,11 @@ header {position:relative;min-width:1250px;height:100px;}
 main {}
 /* ---------------------배너(메인)------------------- */
 .banner {position:relative;
-  overflow: hidden;}
+  overflow: hidden;max-width:1920px;}
 .banner_space {width:100%; height:620px;
-  background: url('../img/bnimg01.jpg') center center / cover no-repeat;}
+  }
+  .banner_space div {width:19200px;display:flex; justify-content: left; }
+  .banner_space img {margin:0; padding:0}
 .banner ul {
   position:absolute; 
   left:50%; 
@@ -136,9 +137,9 @@ main {}
 .banner ul li button {
   width:17px; height:17px; border-radius: 50%;
   border:1px solid black;
-  background: rgba(2, 37, 59,0)
 }
-.check {background: rgba(2, 37, 59,1)}
+.banner ul li button:hover {cursor:pointer;}
+.point_bn {background: rgba(2, 37, 59,1); border-radius: 50%;}
 
 /* -------------------인쿼리(메인)--------------------- */
 .Inquiry {}
