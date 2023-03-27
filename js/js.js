@@ -15,15 +15,13 @@ MenuLine.forEach(function(item,index){
 const bnBtn = document.querySelectorAll('.banner ul li button')
 const bnImg = document.querySelector('.banner_space div')
 
-let mgl = 0
-let ttime = 0
 
 let Btn = 0
+let Num = 0
 bnBtn.forEach(function(bnbtn,btn){
   bnbtn.onclick = function(){
     bnBtn[Btn].classList.remove('point_bn')
     this.classList.add('point_bn')
-    
     Btn=btn;
     Num= -1920 * btn
     bnImg.style.marginLeft = `${Num}px`;
@@ -33,15 +31,19 @@ bnBtn.forEach(function(bnbtn,btn){
 
 
 setInterval(function(){
-  ttime += 1
-  bnBtn[0].classList.remove('point_bn')
-  if(ttime ==8){
-    ttime = 0
-    mgl = 0;
-    bnImg.style.marginLeft = `${mgl}px`
-  }else{mgl -= 1920;
-    bnImg.style.marginLeft = `${mgl}px`;
-    console.log(mgl)
+  Btn += 1
+  let yBtn = Btn-1
+  if(Btn ==8){
+    Btn = 0;
+    Num = 0;
+    bnImg.style.marginLeft = `${Num}px`
+    bnBtn[7].classList.remove('point_bn')
+    bnBtn[0].classList.add('point_bn')
+  }else{Num -= 1920;
+    bnImg.style.marginLeft = `${Num}px`;
+    console.log(Num)
+    bnBtn[yBtn].classList.remove('point_bn')
+    bnBtn[Btn].classList.add('point_bn')
   }
 }, 2000);
 /*
