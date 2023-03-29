@@ -123,7 +123,7 @@ header {position:relative;min-width:1250px;height:100px;}
 main {}
 /* ---------------------배너(메인)------------------- */
 .banner {position:relative;
-  overflow: hidden;max-width:1920px;}
+  overflow: hidden;width:1920px;}
 .banner_space {width:100%; height:620px;
   }
   .banner_space div {width:19200px;display:flex; justify-content: left; transition: 0.3s; }

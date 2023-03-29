@@ -46,17 +46,26 @@ setInterval(function(){
     bnBtn[Btn].classList.add('point_bn')
   }
 }, 2000);
-/*
-let bnImgt = 0
-$(function(){
-setInterval(function(){
-  if(bnImgt == 8){
-    bnImgt = 0;
-    bnImg.animate({'margin-left':'=0px'},300);
-  } else {
-    bnImg.animate({'margin-left':'-1920px'},300);
-    bnImgt++}
-    console.log(bnImgt)
-},2000)
+
+
+
+const boxs = document.querySelectorAll('.box')
+const detailViews = document.querySelectorAll('.detail_view')
+const closeBtn = document.querySelectorAll('.close_btn')
+
+boxs.forEach(function(box,index){
+  box.onclick = function(){
+    detailViews.forEach(function(detailView){
+      detailView.style.display = 'none'
+    })
+    detailViews[index].style.display = 'block'
+  }
 })
-*/
+
+closeBtn.forEach(function(Close,index){
+  Close.onclick = function(){
+    detailViews.forEach(function(detailView){
+      detailView.style.display = 'none'
+    })
+  }
+})

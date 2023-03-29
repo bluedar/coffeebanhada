@@ -25,7 +25,7 @@ header {position:relative;min-width:1250px;height:100px;}
 
   .menu_wrap {
     position:absolute;width:100%;height:60px;bottom:0;
-    border-bottom:#ccc 1px solid;}
+    border-bottom:#aaa 1px solid;}
 
     .main_menu { position:absolute;height:100px; left:50%; margin-left:-400px;bottom:0;}
     .main_menu > li { 
@@ -37,13 +37,12 @@ header {position:relative;min-width:1250px;height:100px;}
       line-height:100px;
       height:100px;
     }
-    .main_menu_li::after { position:relative;
+    .underbar::after { position:relative;
       top:-3px;
-      display:none; content:""; clear:both; height:3px; background:#333 }
-    .main_menu .show::after { display:block;}
+      display:block; content:""; clear:both; height:5px; background:#333 }
     
 
-    .main_menu > li a:hover {color:#ddd;}
+    .main_menu > li a:hover {color:#aaa;}
 
     .main_menu > li a {padding:40px 0;font-weight:700;transition:0.5s;}
 
@@ -57,7 +56,6 @@ header {position:relative;min-width:1250px;height:100px;}
       z-index: 10;
       height:0px;
       overflow: hidden;
-      border-bottom:1px solid #2e2e2e;
     }
     .menu_wrap:hover .sub_menu {
       height:276px;
@@ -170,6 +168,55 @@ main {}
 .box .img .new_menu {width:95%; transition:0.5s;}
 .box .img:hover .new_menu {transform: scale(1.1);cursor:pointer;}
 .box .img .new {position:absolute ;width:40px; top:10px; left:10px;}
+
+
+.detail_view { display:none;
+  position:relative; background:#F8F8F8;
+  margin-bottom:10px;
+}
+  
+  .close_btn {
+    position:absolute; 
+    top:20px; 
+    right:15px;
+    font-size: 40px;
+    color:#666
+  }
+  .close_btn:hover {cursor:pointer;}
+
+  
+  .detail_view > img { 
+    position:absolute; 
+    top:15px; 
+    left:15px;
+  }
+  
+  .ditail_img {display: inline-block;width:380px;}
+    .ditail_img img {width:90%;}
+
+  .detail_info {display: inline-block; width:780px;}
+    .detail_title {
+      font-size:24px; font-weight:700;
+    }
+    .p1 {font-size:18px; margin-top:15px;line-height:24px;}
+    .detail_data {}
+    
+    .detail_info table {
+      width:100%; border-top:1px solid black;
+      text-align: center;
+    }
+    .detail_info tbody {}
+    .detail_info tr {width:100%;}
+    .detail_info th,.detail_info td{
+      height:40px; font-weight:300;
+    }
+    .detail_info th { background:#F0F0F0;
+      border-bottom: 1px solid #F8F8F8;
+    }
+    .detail_info td {}
+    .detail_info .p3 {line-height:20px; font-size:14px;margin-top:10px;}
+    .detail_info span {font-weight:bold;}
+
 
 
 
