@@ -361,3 +361,5 @@ aside label span {font-size:14px; letter-spacing:-1px;}
 aside > a {display:block; text-align:center; border: 1px solid black; margin: 0 0px 10px; height: 30px; line-height:30px;  font-weight:500;}
 
 .aside1 {color:#fff; background:orange}
+aside > a:hover{ background:#02253B; color:#fff}
+
